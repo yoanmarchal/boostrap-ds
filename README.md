@@ -1,4 +1,7 @@
 # jQuery UI built with webpack demo
+
+[![Greenkeeper badge](https://badges.greenkeeper.io/yoanmarchal/webpack-jquery-ui.svg)](https://greenkeeper.io/)
+
 fork of https://github.com/jzaefferer/webpack-jquery-ui
 
 This repository provides a sample setup to use jQuery UI widgets, built
