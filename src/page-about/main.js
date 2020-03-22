@@ -1,6 +1,7 @@
-require('normalize.css/normalize.css')
-require('../scss/main.scss')
-require('./page.css')
+import 'bootstrap'
+import 'normalize.css/normalize.css'
+import '../scss/main.scss'
+
 const img = require('../img/unicorn.jpg')
 
 document.addEventListener('DOMContentLoaded', () => {
