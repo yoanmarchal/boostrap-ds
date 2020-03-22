@@ -77,5 +77,10 @@
   </div>
 
   <%= require('html-loader!../partials/footer.html') %>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      console.log('DOMContentLoaded', 'page-index')
+    });
+  </script>
 </body>
 </html>
