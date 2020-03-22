@@ -47,6 +47,25 @@ module.exports = {
         ]
       },
       {
+        test: /\.(scss)$/,
+        use: [{
+          loader: 'style-loader', // inject CSS to page
+        }, {
+          loader: 'css-loader', // translates CSS into CommonJS modules
+        }, {
+          loader: 'postcss-loader', // Run postcss actions
+          options: {
+            plugins: function () { // postcss plugins, can be exported to postcss.config.js
+              return [
+                require('autoprefixer')
+              ];
+            }
+          }
+        }, {
+          loader: 'sass-loader' // compiles Sass to CSS
+        }]
+      },
+      {
         // Load all images as base64 encoding if they are smaller than 8192 bytes
         test: /\.(png|jpe?g|gif|svg)$/i,
         use: [

@@ -3,9 +3,9 @@ const { Foo } = require('../js/foo.cjs')
 import 'bootstrap';
 
 
-require('normalize.css/normalize.css')
-require('../scss/main.scss')
-require('./page.css')
+import('normalize.css/normalize.css')
+import('../scss/main.scss')
+import('./page.css')
 
 document.addEventListener('DOMContentLoaded', () => {
   console.log('DOMContentLoaded', 'page-index')
