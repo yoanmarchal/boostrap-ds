@@ -43,10 +43,6 @@ export default (env = {}) => ({
         }
       },
       {
-        test: /\.css$/i,
-        use: [MiniCssExtractPlugin.loader, 'css-loader']
-      },
-      {
         test: /\.(scss)$/,
         use: [
           {
@@ -60,7 +56,9 @@ export default (env = {}) => ({
             options: {
               plugins: function () {
                 // postcss plugins, can be exported to postcss.config.js
-                return [require('autoprefixer')]
+                return [
+                  require('autoprefixer')
+                ]
               }
             }
           },
@@ -69,6 +67,10 @@ export default (env = {}) => ({
           }
         ]
       },
+      // {
+      //   test: /\.css$/i,
+      //   use: [MiniCssExtractPlugin.loader, 'css-loader']
+      // },
       {
         // Load all images as base64 encoding if they are smaller than 8192 bytes
         test: /\.(png|jpe?g|gif|svg)$/i,
