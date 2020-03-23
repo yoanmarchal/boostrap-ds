@@ -10,7 +10,25 @@ export default (env = {}) => ({
     index: './src/page-index/main.js',
     about: './src/page-about/main.js',
     contacts: './src/page-contacts/main.js',
-    accordion: './src/pages/page-accordion/main.js'
+    accordion: './src/pages/page-accordion/main.js',
+    bulletpoint: './src/pages/page-bulletpoint/main.js',
+    buttons: './src/pages/page-buttons/main.js',
+    cards: './src/pages/page-cards/main.js',
+    carousel: './src/pages/page-carousel/main.js',
+    dialogs: './src/pages/page-dialogs/main.js',
+    forms: './src/pages/page-forms/main.js',
+    indicators: './src/pages/page-indicators/main.js',
+    links: './src/pages/page-links/main.js',
+    modal: './src/pages/page-modal/main.js',
+    nav: './src/pages/page-nav/main.js',
+    navbar: './src/pages/page-navbar/main.js',
+    pagination: './src/pages/page-pagination/main.js',
+    priorityNav: './src/pages/page-priorityNav/main.js',
+    progressBars: './src/pages/page-progressBars/main.js',
+    stepbar: './src/pages/page-stepbar/main.js',
+    tables: './src/pages/page-tables/main.js',
+    tabs: './src/pages/page-tabs/main.js',
+    typographie: './src/pages/page-typographie/main.js',
   },
 
   // https://webpack.js.org/concepts/loaders/
@@ -93,6 +111,114 @@ export default (env = {}) => ({
       inject: true,
       chunks: ['accordion'],
       filename: 'accordion.html'
-    })
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/pages/page-bulletpoint/tmpl.html',
+      inject: true,
+      chunks: ['bulletpoint'],
+      filename: 'bulletpoint.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/pages/page-buttons/tmpl.html',
+      inject: true,
+      chunks: ['buttons'],
+      filename: 'buttons.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/pages/page-cards/tmpl.html',
+      inject: true,
+      chunks: ['cards'],
+      filename: 'cards.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/pages/page-carousel/tmpl.html',
+      inject: true,
+      chunks: ['carousel'],
+      filename: 'carousel.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/pages/page-dialogs/tmpl.html',
+      inject: true,
+      chunks: ['dialogs'],
+      filename: 'dialogs.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/pages/page-forms/tmpl.html',
+      inject: true,
+      chunks: ['forms'],
+      filename: 'forms.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/pages/page-indicators/tmpl.html',
+      inject: true,
+      chunks: ['indicators'],
+      filename: 'indicators.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/pages/page-links/tmpl.html',
+      inject: true,
+      chunks: ['links'],
+      filename: 'links.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/pages/page-modal/tmpl.html',
+      inject: true,
+      chunks: ['modal'],
+      filename: 'modal.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/pages/page-nav/tmpl.html',
+      inject: true,
+      chunks: ['nav'],
+      filename: 'nav.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/pages/page-navbar/tmpl.html',
+      inject: true,
+      chunks: ['navbar'],
+      filename: 'navbar.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/pages/page-pagination/tmpl.html',
+      inject: true,
+      chunks: ['pagination'],
+      filename: 'pagination.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/pages/page-priorityNav/tmpl.html',
+      inject: true,
+      chunks: ['priorityNav'],
+      filename: 'priorityNav.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/pages/page-progressBars/tmpl.html',
+      inject: true,
+      chunks: ['progressBars'],
+      filename: 'progressBars.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/pages/page-stepbar/tmpl.html',
+      inject: true,
+      chunks: ['stepbar'],
+      filename: 'stepbar.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/pages/page-tables/tmpl.html',
+      inject: true,
+      chunks: ['tables'],
+      filename: 'tables.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/pages/page-tabs/tmpl.html',
+      inject: true,
+      chunks: ['tabs'],
+      filename: 'tabs.html'
+    }),
+    new HtmlWebpackPlugin({
+      template: './src/pages/page-typographie/tmpl.html',
+      inject: true,
+      chunks: ['typographie'],
+      filename: 'typographie.html'
+    }),
   ]
 })
