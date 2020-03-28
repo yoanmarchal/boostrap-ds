@@ -35,15 +35,7 @@ export default (env = {}) => ({
   module: {
     rules: [
       {
-        test: /\.js$/i,
-        exclude: /node_modules/,
-        loader: 'babel-loader',
-        options: {
-          presets: ['env']
-        }
-      },
-      {
-        test: /\.(scss)$/,
+        test: /\.scss$/,
         use: [
           {
             loader: 'style-loader' // inject CSS to page
@@ -66,6 +58,14 @@ export default (env = {}) => ({
             loader: 'sass-loader' // compiles Sass to CSS
           }
         ]
+      },
+      {
+        test: /\.js$/i,
+        exclude: /node_modules/,
+        loader: 'babel-loader',
+        options: {
+          presets: ['env']
+        }
       },
       // {
       //   test: /\.css$/i,
