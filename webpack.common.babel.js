@@ -1,5 +1,6 @@
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import MiniCssExtractPlugin from 'mini-css-extract-plugin'
+import { CleanWebpackPlugin } from 'clean-webpack-plugin'
 
 import Merge from 'webpack-merge'
 
@@ -7,6 +8,7 @@ export default (env = {}) => ({
   mode: env.dev ? 'development' : 'production',
 
   entry: {
+    // styles: './src/scss/main.scss',
     index: './src/page-index/main.js',
     about: './src/page-about/main.js',
     contacts: './src/page-contacts/main.js',
@@ -28,7 +30,7 @@ export default (env = {}) => ({
     stepbar: './src/pages/page-stepbar/main.js',
     tables: './src/pages/page-tables/main.js',
     tabs: './src/pages/page-tabs/main.js',
-    typographie: './src/pages/page-typographie/main.js',
+    typographie: './src/pages/page-typographie/main.js'
   },
 
   // https://webpack.js.org/concepts/loaders/
@@ -38,10 +40,10 @@ export default (env = {}) => ({
         test: /\.scss$/,
         use: [
           {
-            loader: 'style-loader' // inject CSS to page
+            loader: env.dev ? 'style-loader' : MiniCssExtractPlugin.loader
           },
           {
-            loader: 'css-loader' // translates CSS into CommonJS modules
+            loader: 'css-loader?-url' // translates CSS into CommonJS modules
           },
           {
             loader: 'postcss-loader', // Run postcss actions
@@ -67,10 +69,15 @@ export default (env = {}) => ({
           presets: ['env']
         }
       },
-      // {
-      //   test: /\.css$/i,
-      //   use: [MiniCssExtractPlugin.loader, 'css-loader']
-      // },
+      {
+        test: /\.css$/i,
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader
+          },
+          'css-loader'
+        ]
+      },
       {
         // Load all images as base64 encoding if they are smaller than 8192 bytes
         test: /\.(png|jpe?g|gif|svg)$/i,
@@ -84,7 +91,7 @@ export default (env = {}) => ({
             }
           }
         ]
-      }
+      },
     ]
   },
 
@@ -222,5 +229,11 @@ export default (env = {}) => ({
       chunks: ['typographie'],
       filename: 'typographie.html'
     }),
+ 
+    new CleanWebpackPlugin(), // cleans output.path by default
+    new MiniCssExtractPlugin({
+      filename: '[name].[contenthash].css',
+      chunkFilename: 'css/style.css'
+    })
   ]
 })

@@ -1,82 +1,80 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>My homepage</title>
-  <meta charset="UTF-8">
-  <meta http-equiv="cache-control" content="no-cache"/>
-  <meta http-equiv="pragma" content="no-cache"/>
-  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
-  <meta name="viewport"
-        content="width=device-width,user-scalable=0,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-</head>
-<body>
+<%= require('html-loader!../../partials/header.html') %>
 
-  <%= require('html-loader!../../partials/nav.html') %>
+<div class="container-fluid">
+  <div class="row">
 
-  <div class="container-fluid">
-    <div class="row">
+    <%= require('html-loader!../../partials/sidebar.html') %>
 
-      <%= require('html-loader!../../partials/sidebar.html') %> 
-  
-      <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
-        <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-          <h1 class="h2">Buttons</h1>
-        </div>
-        <div class="container">
-            <div class="row">
-              <div class="col-lg-10 offset-lg-2">
-              <h3 class="d-flex mt-5">Popovers<a class="doc-link d-inline-flex align-items-center ml-2" href="../components/popovers/" title="go to popovers documentation page"></a></h3>
-              <div>
-                  <button title="" data-original-title="" type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Left</button>
-          
-                  <button title="" data-original-title="" type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Top</button>
-          
-                  <button title="" data-original-title="" type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Bottom</button>
-          
-                  <button title="" data-original-title="" type="button" class="btn btn-secondary" data-container="body" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Right</button>
-              </div>
-              <h3 class="d-flex mt-5">Tooltips<a class="doc-link d-inline-flex align-items-center ml-2" href="../components/tooltips/" title="go to tooltips documentation page"></a></h3>
-              <div>
-                  <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="left" title="Tooltip on left">Left</button>
-          
-                  <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Top</button>
-          
-                  <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">Bottom</button>
-          
-                  <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="right" title="Tooltip on right">Right</button>
-              </div>
-              </div>
+    <main role="main" class="col-md-9 ml-sm-auto col-lg-10 px-4">
+      <div
+        class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+        <h1 class="h2">Buttons</h1>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-10 offset-lg-2">
+            <h3 class="d-flex mt-5">Popovers<a class="doc-link d-inline-flex align-items-center ml-2"
+                href="../components/popovers/" title="go to popovers documentation page"></a></h3>
+            <div>
+              <button title="" data-original-title="" type="button" class="btn btn-secondary" data-container="body"
+                data-toggle="popover" data-placement="left"
+                data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Left</button>
+
+              <button title="" data-original-title="" type="button" class="btn btn-secondary" data-container="body"
+                data-toggle="popover" data-placement="top"
+                data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Top</button>
+
+              <button title="" data-original-title="" type="button" class="btn btn-secondary" data-container="body"
+                data-toggle="popover" data-placement="bottom"
+                data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Bottom</button>
+
+              <button title="" data-original-title="" type="button" class="btn btn-secondary" data-container="body"
+                data-toggle="popover" data-placement="right"
+                data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus.">Right</button>
+            </div>
+            <h3 class="d-flex mt-5">Tooltips<a class="doc-link d-inline-flex align-items-center ml-2"
+                href="../components/tooltips/" title="go to tooltips documentation page"></a></h3>
+            <div>
+              <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="left"
+                title="Tooltip on left">Left</button>
+
+              <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="top"
+                title="Tooltip on top">Top</button>
+
+              <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="bottom"
+                title="Tooltip on bottom">Bottom</button>
+
+              <button type="button" class="btn btn-secondary" data-toggle="tooltip" data-placement="right"
+                title="Tooltip on right">Right</button>
             </div>
           </div>
-          
-          <div id="source-modal" class="modal fade">
-              <div class="modal-dialog modal-lg">
-                  <div class="modal-content">
-                      <div class="modal-header">
-                        <!-- Boosted mod -->
-                        <button type="button" class="close" data-dismiss="modal">
-                          <span class="sr-only">Close modal demo</span>
-                        </button>
-                        <!-- end mod -->
-                          <h4 class="modal-title">Source Code</h4>
-                      </div>
-                      <div class="modal-body">
-                          <pre></pre>
-                      </div>
-                  </div>
-              </div>
-          </div>
-          
-      </main>
-    </div>
-  </div>
+        </div>
+      </div>
 
-  <%= require('html-loader!../../partials/footer.html') %>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      console.log('DOMContentLoaded', 'page-index')
-    });
-  </script>
-</body>
-</html>
+      <div id="source-modal" class="modal fade">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <!-- Boosted mod -->
+              <button type="button" class="close" data-dismiss="modal">
+                <span class="sr-only">Close modal demo</span>
+              </button>
+              <!-- end mod -->
+              <h4 class="modal-title">Source Code</h4>
+            </div>
+            <div class="modal-body">
+              <pre></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+</div>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    console.log('DOMContentLoaded', 'page-index')
+  });
+</script>
+<%= require('html-loader!../../partials/footer.html') %>
