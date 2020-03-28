@@ -14,7 +14,7 @@ export default env => Merge(CommonConfig(env), {
       new TerserPlugin({
         cache: true,
         parallel: true,
-        sourceMap: true
+        sourceMap: false
       }),
       new OptimizeCssAssetsPlugin({})
     ]

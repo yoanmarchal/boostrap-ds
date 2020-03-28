@@ -35,7 +35,7 @@ entry: {
 function generateEntries () {
   const entry = {}
   for (const key in components) {
-    if (components.hasOwnProperty(key)) {
+    if (Object.prototype.hasOwnProperty.call(components, key)) {
       entry[key] = `./src/pages/page-${key}/main.js`;
     }
   }
@@ -80,20 +80,33 @@ function generatePluginsConf () {
       }
     }
   }
+  
+  //console.log(pluginsConf)
   return pluginsConf;
 }
 
 function generatePlugins() {
-  let plugins = [];
+  const pluginsDef = [];
   let componentsConfig = generatePluginsConf()
-  for (const component in componentsConfig) {
-    plugins.push(new HtmlWebpackPlugin(component))
+  
+ // console.log(componentsConfig['typographie']);
+  //console.log(JSON.stringify(`${componentsConfig['typographie']}`));
+  //console.log('new HtmlWebpackPlugin(' + pluginsDef + ')')
+
+  
+  for (const component in components) {
+    //console.log(JSON.stringify(componentsConfig[component]));
+    //componentsConfig[component]
+
+    pluginsDef.push('new HtmlWebpackPlugin(' + JSON.stringify(componentsConfig[component]) + ')')
   }
-  return plugins;
+  console.log(pluginsDef);
+  
+  return pluginsDef;
 }
 
 
 export default (env = {}) => ({
   entry: generateEntries(),
-  plugins: generatePlugins()
+  // plugins: generatePlugins()
 })
