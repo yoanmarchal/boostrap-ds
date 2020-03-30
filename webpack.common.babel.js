@@ -68,11 +68,14 @@ export default (env = {}) =>
           ]
         },
         {
-          test: /\.js$/i,
+          test: /\.m?js$/,
           exclude: /node_modules/,
-          loader: 'babel-loader',
-          options: {
-            presets: ['env']
+          use: {
+            loader: 'babel-loader',
+            options: {
+              presets: ['@babel/preset-env'],
+              plugins: ['@babel/plugin-transform-runtime']
+            }
           }
         },
         {
@@ -128,6 +131,7 @@ export default (env = {}) =>
         chunks: ['index'],
         filename: 'index.html'
       }),
+      
       new HtmlWebpackPlugin({
         template: './src/page-about/tmpl.html',
         inject: true,
@@ -254,6 +258,7 @@ export default (env = {}) =>
         chunks: ['typographie'],
         filename: 'typographie.html'
       }),
+
       new HtmlWebpackTagsPlugin({ tags: ['./css/style.css'], append: true }),
 
       new CleanWebpackPlugin(), // cleans output.path by default

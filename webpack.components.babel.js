@@ -81,7 +81,7 @@ function generatePluginsConf () {
     }
   }
   
-  //console.log(pluginsConf)
+  console.log(pluginsConf)
   return pluginsConf;
 }
 
@@ -89,16 +89,19 @@ function generatePlugins() {
   const pluginsDef = [];
   let componentsConfig = generatePluginsConf()
   
- // console.log(componentsConfig['typographie']);
-  //console.log(JSON.stringify(`${componentsConfig['typographie']}`));
-  //console.log('new HtmlWebpackPlugin(' + pluginsDef + ')')
-
+  //  console.log(componentsConfig['typographie']);
+  //  console.log(JSON.stringify(`${componentsConfig['typographie']}`));
+  //  console.log('new HtmlWebpackPlugin(' + pluginsDef + ')')
   
   for (const component in components) {
     //console.log(JSON.stringify(componentsConfig[component]));
     //componentsConfig[component]
+    // (async () => {
 
-    pluginsDef.push('new HtmlWebpackPlugin(' + JSON.stringify(componentsConfig[component]) + ')')
+    //   let test = await new HtmlWebpackPlugin(componentsConfig[component])
+    //   pluginsDef.push(test)
+    // })();
+
   }
   console.log(pluginsDef);
   
@@ -108,5 +111,5 @@ function generatePlugins() {
 
 export default (env = {}) => ({
   entry: generateEntries(),
-  // plugins: generatePlugins()
+  //plugins: generatePlugins()
 })
