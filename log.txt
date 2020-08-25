@@ -1,0 +1,25 @@
+
+> bootstrapds@1.0.0 build C:\Users\Yoan\Documents\GitHub\boostrap-ds\11tyVersion
+> eleventy
+
+    Error: ./src/accordion.pug:5:21
+        3| block content
+        4|   <div id="accordion-1" 
+      > 5|   class="accordion">
+    ---------------------------^
+        6|     <div class="card">
+        7|       <div class="card-header" id="headingOne">
+        8|         <h5 class="mb-0">
+    
+    Syntax Error: Unexpected token
+        at makeError (C:\Users\Yoan\Documents\GitHub\boostrap-ds\11tyVersion\node_modules\pug-error\index.js:32:13)
+        at Lexer.error (C:\Users\Yoan\Documents\GitHub\boostrap-ds\11tyVersion\node_modules\pug-lexer\index.js:59:15)
+        at Lexer.assertExpression (C:\Users\Yoan\Documents\GitHub\boostrap-ds\11tyVersion\node_modules\pug-lexer\index.js:87:12)
+        at Lexer.code (C:\Users\Yoan\Documents\GitHub\boostrap-ds\11tyVersion\node_modules\pug-lexer\index.js:1023:28)
+        at Lexer.callLexerFunction (C:\Users\Yoan\Documents\GitHub\boostrap-ds\11tyVersion\node_modules\pug-lexer\index.js:1460:23)
+        at Lexer.advance (C:\Users\Yoan\Documents\GitHub\boostrap-ds\11tyVersion\node_modules\pug-lexer\index.js:1493:15)
+        at Lexer.callLexerFunction (C:\Users\Yoan\Documents\GitHub\boostrap-ds\11tyVersion\node_modules\pug-lexer\index.js:1460:23)
+        at Lexer.getTokens (C:\Users\Yoan\Documents\GitHub\boostrap-ds\11tyVersion\node_modules\pug-lexer\index.js:1516:12)
+        at lex (C:\Users\Yoan\Documents\GitHub\boostrap-ds\11tyVersion\node_modules\pug-lexer\index.js:12:42)
+        at Object.lex (C:\Users\Yoan\Documents\GitHub\boostrap-ds\11tyVersion\node_modules\pug\lib\index.js:100:27)
+Wrote 0 files in 0.83 seconds (v0.11.0)

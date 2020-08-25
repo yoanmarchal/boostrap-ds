@@ -1,0 +1,58 @@
+{"search" : [{
+    "url" : "/components/buttons/",
+    "title" : "Buttons"
+  },{
+    "url" : "/components/bulletpoint/",
+    "title" : "Bulletpoint"
+  },{
+    "url" : "/components/accordion/",
+    "title" : "Accordion"
+  },{
+    "url" : "/components/card/",
+    "title" : "Card"
+  },{
+    "url" : "/components/carousel/",
+    "title" : "Carousel"
+  },{
+    "url" : "/components/dialog/",
+    "title" : "Dialog"
+  },{
+    "url" : "/components/form/",
+    "title" : "Form"
+  },{
+    "url" : "/components/indicator/",
+    "title" : "Indicators"
+  },{
+    "url" : "/components/link/",
+    "title" : "Link"
+  },{
+    "url" : "/components/modal/",
+    "title" : "Modal"
+  },{
+    "url" : "/components/pagination/",
+    "title" : "Pagination"
+  },{
+    "url" : "/components/prioritynav/",
+    "title" : "PriorityNav"
+  },{
+    "url" : "/components/progressbar/",
+    "title" : "ProgressBars"
+  },{
+    "url" : "/components/stepbar/",
+    "title" : "Stepbar"
+  },{
+    "url" : "/components/table/",
+    "title" : "Table"
+  },{
+    "url" : "/components/tab/",
+    "title" : "Tab"
+  },{
+    "url" : "/components/typographie/",
+    "title" : "Typographie"
+  },{
+    "url" : "/components/nav/",
+    "title" : "Nav"
+  },{
+    "url" : "/components/navbar/",
+    "title" : "Navbar"
+  }]}
