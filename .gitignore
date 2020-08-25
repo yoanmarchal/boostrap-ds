@@ -1,13 +1,1 @@
-.tmp
-dist/
-node_modules/
-.sass-cache
-.idea
-*.iml
-*.DS_Store
-*.log
-.project
-.elasticbeanstalk/
-
-# Local Netlify folder
-.netlify
+node_modules

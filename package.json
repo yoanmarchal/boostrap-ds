@@ -1,72 +1,18 @@
 {
-  "name": "boostrap-ds",
+  "name": "bootstrapds",
   "version": "1.0.0",
-  "description": "boostrap designsystem tester using webpack v4",
-  "keywords": [
-    "webpack",
-    "static",
-    "starter",
-    "html",
-    "pages"
-  ],
-  "license": "MIT",
-  "dependencies": {
-    "bootstrap": "4.4.1",
-    "normalize.css": "8.0.1",
-    "popper.js": "1.16.1",
-    "resolve-url-loader": "3.1.1"
-  },
+  "description": "extends layout.pug",
+  "main": ".eleventy.js",
   "scripts": {
-    "start": "webpack-dev-server --config webpack.dev.babel.js --env.dev",
-    "build": "webpack --config webpack.prod.babel.js"
+    "build": "eleventy",
+    "dev": "set DEBUG=Eleventy* & eleventy --serve --watch"
   },
+  "author": "",
+  "license": "ISC",
   "devDependencies": {
-    "@babel/core": "7.10.2",
-    "@babel/plugin-proposal-class-properties": "7.10.1",
-    "@babel/plugin-proposal-decorators": "7.10.1",
-    "@babel/plugin-proposal-export-default-from": "7.10.1",
-    "@babel/plugin-proposal-object-rest-spread": "7.10.1",
-    "@babel/plugin-transform-arrow-functions": "7.10.1",
-    "@babel/plugin-transform-async-to-generator": "7.10.1",
-    "@babel/plugin-transform-classes": "7.10.1",
-    "@babel/plugin-transform-runtime": "7.10.1",
-    "@babel/preset-env": "7.10.2",
-    "@babel/register": "7.10.1",
-    "autoprefixer": "9.8.0",
-    "babel-loader": "8.1.0",
-    "babel-plugin-transform-object-rest-spread": "6.26.0",
-    "babel-preset-env": "1.7.0",
-    "bootstrap-loader": "3.0.4",
-    "clean-webpack-plugin": "3.0.0",
-    "css-loader": "3.5.3",
-    "core-js": "3.6.5",
-    "file-loader": "6.0.0",
-    "html-loader": "1.1.0",
-    "html-webpack-plugin": "4.3.0",
-    "html-webpack-tags-plugin": "2.0.17",
-    "http-server": "0.12.3",
-    "jquery": "3.5.1",
-    "mini-css-extract-plugin": "0.9.0",
-    "optimize-css-assets-webpack-plugin": "5.0.3",
-    "regenerator-runtime": "0.13.5",
-    "postcss-loader": "3.0.0",
-    "sass": "1.26.7",
-    "sass-loader": "8.0.2",
-    "standard": "14.3.4",
-    "style-loader": "1.2.1",
-    "svg-url-loader": "6.0.0",
-    "terser-webpack-plugin": "3.0.2",
-    "tether": "1.4.7",
-    "url-loader": "4.1.0",
-    "webpack": "4.43.0",
-    "webpack-cli": "3.3.11",
-    "webpack-dev-server": "3.11.0",
-    "webpack-merge": "4.2.2"
+    "@11ty/eleventy": "^0.11.0"
   },
-  "standard": {
-    "env": [
-      "node",
-      "es6"
-    ]
+  "dependencies": {
+    "luxon": "^1.24.1"
   }
 }
