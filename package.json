@@ -10,7 +10,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@11ty/eleventy": "0.11.1"
+    "@11ty/eleventy": "2.0.1"
   },
   "dependencies": {
     "luxon": "^1.24.1"
